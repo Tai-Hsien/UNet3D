@@ -168,7 +168,7 @@ if __name__ == '__main__':
                     'losses': losses,
                     'mdsc': mdsc,
                     'val_losses': val_losses,
-                    'val_dsc': val_mdsc},
+                    'val_mdsc': val_mdsc},
                     os.path.join(model_path, checkpoint_name))
         
         # save the best model
@@ -180,7 +180,7 @@ if __name__ == '__main__':
                         'losses': losses,
                         'mdsc': mdsc,
                         'val_losses': val_losses,
-                        'val_dsc': val_mdsc},
+                        'val_mdsc': val_mdsc},
                         os.path.join(model_path, '{}_best.tar'.format(model_name)))
             
         # save all losses and dsc data

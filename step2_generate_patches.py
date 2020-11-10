@@ -32,7 +32,8 @@ def generate_val_sample(image_list, h5_path, patch_size):
         np_annotation = itk.array_from_image(itk_annotation)
         
         # normalized
-        np_image = (np_image - np_image.mean())/ np_image.std()
+        #np_image = (np_image - np_image.mean())/ np_image.std()
+        np_image = np_image/(np_image.max()-np_image.min())
         
         # reshape
         np_image = np_image.reshape([1, np_image.shape[0], np_image.shape[1], np_image.shape[2]])
